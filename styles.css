@@ -1,0 +1,435 @@
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1d1d1d;
+            color: #f5f5f5;
+        }
+
+        header,
+        section,
+        footer {
+            max-width: 1200px;
+            margin: auto;
+            padding: 120px 20px;
+        }
+
+        #mainNav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        #mainNav.nav-visible {
+            transform: translateY(0);
+            opacity: 1;
+
+        }
+
+        #mainNav.nav-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin: auto;
+            background-color: #000000;
+            opacity: 0.5;
+
+        }
+
+        nav img {
+            height: 80px;
+            width: 100px;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            padding: 10px 60px 10px 10px;
+            font-weight: 1000;
+            font-family: monospace;
+        }
+
+        nav ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -5%;
+            transition: 0.5s;
+        }
+
+        nav ul li a:hover::after {
+            width: 65%;
+        }
+
+        .hero {
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 200px;
+        }
+
+        .hero img {
+            max-width: 470px;
+            border-radius: 8px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .hero h1 span {
+            color: #ff004f;
+        }
+
+        .hero p {
+            color: #ededed;
+            font-size: 20px;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff004f;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #ff004f;
+            margin-bottom: 30px;
+            margin-top: -10px;
+            text-align: center;
+
+        }
+
+        #about p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: #f5f5f5;
+            text-indent: 50px;
+
+        }
+
+        #about {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 50px;
+            align-items: flex-start;
+            padding: 50px;
+            background-color: #000000;
+            border-radius: 10px;
+        }
+
+        #about img {
+            border-radius: 8px;
+        }
+
+
+
+        h3 {
+            font-size: 2rem;
+            color: #ff004f;
+            text-align: center;
+
+
+        }
+
+        .skills {
+            margin-bottom: 100px;
+            margin-right: 50px;
+            margin-left: 50px;
+
+        }
+
+
+
+
+
+
+
+
+
+        .download-btn {
+            margin-top: 20px;
+            background-color: #ff004f;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .cta {
+            text-align: center;
+            background-color: #111;
+            padding: 40px 20px;
+        }
+
+        .cta h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .cta button {
+            margin-top: 20px;
+            padding: 10px 10px;
+            background-color: #ff004f;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            background-color: #000;
+        }
+
+        .mirror-bg {
+            position: relative;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 4px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            z-index: 1;
+        }
+
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skills-list li {
+            min-width: 160px;
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            border-color: #ff004f;
+            border-style: solid;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.5s;
+            padding-bottom: 20px;
+            margin: 20px 10px 20px 10px;
+            position: relative;
+            font-weight: bold;
+        }
+
+        .skills-list li i {
+            color: rgb(255, 255, 255);
+
+        }
+
+        .skills-list li:hover {
+            transform: scale(1.08);
+        }
+
+        section .services {
+            background-color: #1d1d1d;
+            padding: 50px 20px;
+            border-radius: 10px;
+        }
+
+        .services {
+            margin-bottom: 100px;
+            margin-right: 200px;
+            margin-left: 200px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* Cards horizontal scroll */
+        .cards.horizontal-scroll {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            gap: 32px;
+            padding-bottom: 16px;
+            scrollbar-width: thin;
+            scrollbar-color: #ff004f #222;
+        }
+
+        .card {
+            border-color: #ff004f;
+            border-style: solid;
+            min-width: 200px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 32px 20px;
+            margin-top: 10px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.08);
+        }
+
+        /* Optional: Custom scrollbar styling */
+        .horizontal-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .horizontal-scroll::-webkit-scrollbar-thumb {
+            background: #ff004f;
+            border-radius: 4px;
+        }
+
+        .horizontal-scroll::-webkit-scrollbar-track {
+            background: #222;
+        }
+
+
+
+        .bounce-button {
+            /* Basic button styling (optional) */
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #555555;
+            /* Dark Gray */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            bottom: 0;
+
+            /* Animation properties */
+            animation-name: bounce;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+            overflow: hidden;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+                /* At original position */
+            }
+
+            40% {
+                transform: translateY(-10px);
+                /* Move up */
+            }
+
+            60% {
+                transform: translateY(-5px);
+                /* Move up slightly less */
+            }
+        }
+
+        .bounce-button::before,
+        .bounce-button::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Semi-transparent white sparks */
+        }
+
+        .bounce-button::before {
+            top: 50%;
+            left: 25%;
+            width: 5px;
+            height: 5px;
+            margin-top: -2.5px;
+            margin-left: -2.5px;
+        }
+
+        .bounce-button::after {
+            top: 50%;
+            right: 25%;
+            width: 8px;
+            height: 8px;
+            margin-top: -4px;
+            margin-right: -4px;
+        }
+
+        /* Hover effect: Lighter background, pause bounce, and trigger small explosions */
+        .bounce-button:hover {
+            background-color: #777777;
+            animation-play-state: paused;
+            transform: translateY(-2px);
+        }
+
+        .bounce-button:hover::before,
+        .bounce-button:hover::after {
+            opacity: 1;
+            transform: translate(-5px, -5px) scale(1.5);
+            /* Move and slightly scale up */
+        }
+
+        
